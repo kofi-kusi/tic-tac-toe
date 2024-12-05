@@ -13,7 +13,7 @@ function GameBoard() {
     const getGameBoard = () => gameboard;
 
     const chooseCell = (row, column, player) => {
-        if (row || column >= 3) return;
+        if ((row || column >= 3) || (row || column < 0)) return;
         gameboard[row][column].setValue(player);
     }
 
